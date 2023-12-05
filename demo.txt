@@ -1,2 +1,24 @@
-$myNames->"Nurullah"
-echo --$myNames
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Bir isim girin: ");
+        String isim = scanner.nextLine().toLowerCase();
+        int sesliHarfSayisi = 0;
+        int sessizHarfSayisi = 0;
+
+        for (int i = 0; i < isim.length(); i++) {
+            char harf = isim.charAt(i);
+
+            if (harf == 'a' || harf == 'e' || harf == 'ı' || harf == 'i' || harf == 'o' || harf == 'ö' || harf == 'u' || harf == 'ü') {
+                sesliHarfSayisi++;
+            } else if (harf >= 'a' && harf <= 'z') {
+                sessizHarfSayisi++;
+            }
+        }
+
+        int toplamHarfSayisi = sesliHarfSayisi + sessizHarfSayisi;
+
+        System.out.println("Girilen isimdeki sesli harf sayısı: " + sesliHarfSayisi);
+        System.out.println("Girilen isimdeki sessiz harf sayısı: " + sessizHarfSayisi);
+        System.out.println("Girilen isimdeki toplam harf sayısı: " + toplamHarfSayisi);
+
+        scanner.close();
+    }
