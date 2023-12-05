@@ -1,6 +1,6 @@
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("Bir isim girin: ");
-        String isim = scanner.nextLine().toLowerCase();
+
+      
+        String isim = "Nurullah Kardaş"
         int sesliHarfSayisi = 0;
         int sessizHarfSayisi = 0;
 
@@ -20,5 +20,4 @@
         System.out.println("Girilen isimdeki sessiz harf sayısı: " + sessizHarfSayisi);
         System.out.println("Girilen isimdeki toplam harf sayısı: " + toplamHarfSayisi);
 
-        scanner.close();
     }
